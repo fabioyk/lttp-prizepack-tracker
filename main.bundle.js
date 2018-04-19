@@ -57,7 +57,7 @@ module.exports = module.exports.toString();
 /***/ 141:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class='no-select'>\n  NMG Prize Pack Tracker\n</h2>\n\n<div class='prize-pack no-select'>\n  <img class='next-indicator no-select' src='assets/next.png'\n    [ngStyle]=\"{'left': getPackCoords(5)}\" (click)='onAdvancePrize(5)'>\n  <div class='prize-row no-select'>\n    <app-prize *ngFor='let item of pack5; let i = index'\n      itemName={{item}} (click)='onClickPrize(5, i)'></app-prize>\n  </div>\n  <app-enemy-list class='no-select' prizePackNumber=5 (click)='onAdvancePrize(5)'>\n  </app-enemy-list>\n</div>\n<br>\n<div class='prize-pack no-select'>\n  <img class='next-indicator' src='assets/next.png'\n    [ngStyle]=\"{'left': getPackCoords(6)}\" (click)='onAdvancePrize(6)'>\n  <div class='prize-row'>\n      <app-prize *ngFor='let item of pack6; let i = index'\n      itemName={{item}} (click)='onClickPrize(6, i)'></app-prize>\n  </div>\n  <app-enemy-list class='no-select' prizePackNumber=6 (click)='onAdvancePrize(6)'>\n  </app-enemy-list>\n</div>"
+module.exports = "<h2 class='no-select'>\n  NMG Prize Pack Tracker\n</h2>\n\n<div class='prize-pack no-select'>\n  <img class='next-indicator no-select' src='assets/next.png'\n    [ngStyle]=\"{'left': getPackCoords(5)}\" (click)='onAdvancePrize(5)'>\n  <div class='prize-row no-select'>\n    <app-prize *ngFor='let item of pack5; let i = index'\n      itemName={{item}} (click)='onClickPrize(5, i)'></app-prize>\n  </div>\n  <app-enemy-list class='no-select' prizePackNumber=5 (click)='onAdvancePrize(5)'>\n  </app-enemy-list>\n</div>\n<br>\n<div class='prize-pack no-select'>\n  <img class='next-indicator' src='assets/next.png'\n    [ngStyle]=\"{'left': getPackCoords(6)}\" (click)='onAdvancePrize(6)'>\n  <div class='prize-row'>\n      <app-prize *ngFor='let item of pack6; let i = index'\n      itemName={{item}} (click)='onClickPrize(6, i)'></app-prize>\n  </div>\n  <app-enemy-list class='no-select' prizePackNumber=6 (click)='onAdvancePrize(6)'>\n  </app-enemy-list>\n</div>\n<br>\n<button (click)='onSmaller()'>Smaller Window</button>"
 
 /***/ }),
 
@@ -187,6 +187,9 @@ var AppComponent = (function () {
             px += this.current6 * 36;
         }
         return px + 'px';
+    };
+    AppComponent.prototype.onSmaller = function () {
+        window.open("index.html", "", "width=340, height=515, menubar=0 scrollbars=0, titlebar=0, resizable=0, toolbar=0");
     };
     return AppComponent;
 }());
