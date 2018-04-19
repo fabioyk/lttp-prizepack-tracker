@@ -60,4 +60,8 @@ export class AppComponent {
     }
     return px + 'px';
   }
+
+  onSmaller() {
+    window.open("index.html", "", "width=340, height=515, menubar=0 scrollbars=0, titlebar=0, resizable=0, toolbar=0");
+  }
 }

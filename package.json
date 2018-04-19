@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prod": "ng build --env=prod --output-hashing none --base-href \"https://fabioyk.github.io/lttp-prizepack-tracker\""
+    "prod": "ng build --env=prod --output-hashing none --base-href \"https://fabioyk.github.io/lttp-prizepack-tracker/\""
   },
   "private": true,
   "dependencies": {
