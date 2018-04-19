@@ -1,3 +1,25 @@
-<h1>
-  {{title}}
-</h1>
+<h2 class='no-select'>
+  NMG Prize Pack Tracker
+</h2>
+
+<div class='prize-pack no-select'>
+  <img class='next-indicator no-select' src='assets/next.png'
+    [ngStyle]="{'left': getPackCoords(5)}" (click)='onAdvancePrize(5)'>
+  <div class='prize-row no-select'>
+    <app-prize *ngFor='let item of pack5; let i = index'
+      itemName={{item}} (click)='onClickPrize(5, i)'></app-prize>
+  </div>
+  <app-enemy-list class='no-select' prizePackNumber=5 (click)='onAdvancePrize(5)'>
+  </app-enemy-list>
+</div>
+<br>
+<div class='prize-pack no-select'>
+  <img class='next-indicator' src='assets/next.png'
+    [ngStyle]="{'left': getPackCoords(6)}" (click)='onAdvancePrize(6)'>
+  <div class='prize-row'>
+      <app-prize *ngFor='let item of pack6; let i = index'
+      itemName={{item}} (click)='onClickPrize(6, i)'></app-prize>
+  </div>
+  <app-enemy-list class='no-select' prizePackNumber=6 (click)='onAdvancePrize(6)'>
+  </app-enemy-list>
+</div>

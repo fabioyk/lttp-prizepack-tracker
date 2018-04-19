@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { PrizeComponent } from './prize/prize.component';
+import { EnemyListComponent } from './enemy-list/enemy-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrizeComponent,
+    EnemyListComponent
   ],
   imports: [
     BrowserModule,
